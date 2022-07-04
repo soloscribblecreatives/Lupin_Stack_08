@@ -1,0 +1,110 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.launch {
+  position: absolute;
+  left: 322px;
+  top: 220px;
+  width: 382px;
+  height: 382px;
+  z-index: 12;
+}
+
+.s3_1 {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  z-index: 1;
+}
+
+.s3_2 {
+  position: absolute;
+  left: 337px;
+  top: 120px;
+  width: 383px;
+  height: 211px;
+  animation: zoomIn 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+  display: none;
+  z-index: 2;
+}
+
+.s3_3 {
+  position: absolute;
+  left: 378px;
+  top: 357px;
+  width: 307px;
+  height: 244px;
+  animation: zoomIn 1s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+  display: none;
+  z-index: 2;
+}
+
+.s3_4 {
+  position: absolute;
+  left: 212px;
+  top: 698px;
+  width: 585px;
+  height: 37px;
+  animation: slideInUp 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  display: none;
+  z-index: 2;
+}
+
+.s3_5 {
+  position: absolute;
+  left: 512px;
+  top: 0px;
+  width: 513px;
+  height: 767px;
+  z-index: 10;
+}
+
+.s3_5_slide {
+  position: absolute;
+  left: 512px;
+  top: 0px;
+  width: 513px;
+  height: 767px;
+  animation: slideOutRight 1.5s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  z-index: 10;
+}
+
+.s3_6 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 512px;
+  height: 768px;
+  z-index: 10;
+}
+
+.s3_6_slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 512px;
+  height: 768px;
+  animation: slideOutLeft 1.5s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  z-index: 10;
+}
+
+.s3_7 {
+  position: absolute;
+  display: none;
+  animation: fadeOut 1s;
+  animation-delay: 4s;
+  animation-fill-mode: both;
+  z-index: 6;
+}
