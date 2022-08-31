@@ -1,0 +1,28 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.background {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.trace {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	text-align: center;
+	z-index: 10;
+}
+
+.button {
+	position: absolute;
+  left: 659px;
+  top: 0px;
+  width: 365px;
+  height: 156px;
+	z-index: 9999;
+}
