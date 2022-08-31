@@ -388,7 +388,7 @@ switch(pg_id){
 	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.png" width="1024" height="768" alt=""></div><div class="button" onclick="playVid()"></div><video id="trace" class="trace" width="1024" height="768"><source src="slide2/Lucaparib.mp4" type="video/mp4"></video>';
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.png" width="1024" height="768" alt=""></div><div class="button" onclick="playVid()"></div><video id="trace" class="trace" width="1024" height="768"><source src="slide2/Lucaparib.mp4" type="video/mp4"></video><div class="click_here"><img src="slide2/3.png" alt=""></div>';
 	break;
     case 3:
 	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div>';
@@ -539,6 +539,7 @@ $(document).ready(function(){
         function playVid() {
             $('#trace').trigger('play');
 			$('.button').css("display","none");
+			$('.click_here').css("display","none");
         }
 
 

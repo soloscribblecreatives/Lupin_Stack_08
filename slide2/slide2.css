@@ -26,3 +26,32 @@
   height: 156px;
 	z-index: 9999;
 }
+
+.click_here {
+	position: absolute;
+  left: 829px;
+  top: 107px;
+  width: 155px;
+  height: 131px;
+  animation: pulseIt 2s infinite;
+	z-index: 9999;
+}
+
+
+
+@keyframes pulseIt {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 1.15, 1.15);
+    transform: scale3d(1.15, 1.15, 1.15);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
