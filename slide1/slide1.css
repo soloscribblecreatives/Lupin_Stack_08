@@ -7,4 +7,73 @@
 	position: absolute;
 	width: 1024px;
 	height: 768px;
+	z-index: 1;
+}
+
+.ticker1 {
+  position: absolute;
+  left: 86px;
+  top: 229px;
+  width: 453px;
+  height: 453px;
+  z-index: 10;
+}
+
+.ticker2 {
+  position: absolute;
+  left: 481px;
+  top: 227px;
+  width: 454px;
+  height: 454px;
+  z-index: 10;
+}
+
+.rotateAntiClock {
+  animation: rotateAntiClock 2s;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+.rotateClock {
+  animation: rotateClock 2s;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+.clickTicker {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 50;
+}
+
+
+
+
+@keyframes rotateAntiClock {
+  0% {
+    transform-origin: center;
+	transform: none;
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: center;
+    transform: rotate3d(0, 0, 1, -130deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateClock {
+  0% {
+    transform-origin: center;
+	transform: none;
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: center;
+    transform: rotate3d(0, 0, 1, 130deg);
+    opacity: 1;
+  }
 }

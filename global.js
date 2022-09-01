@@ -198,7 +198,7 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 	
  } 
  
-	if(nextSlideNo <= 3){//number 3 is number of total slides present
+	if(nextSlideNo <= 4){//number 3 is number of total slides present
 	// alert(nextSlideNo);
 	var tempNext = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo);
 
@@ -302,10 +302,10 @@ if(direction == 'b') {
 //custom slide changes ends here....
 
 	else{
-	if(page_id <= 3){
+	if(page_id <= 4){
 		page_id = page_id + 1;
 		//alert(page_id);
-		if(page_id == 4){
+		if(page_id == 5){
             flag=1;
         }
 	}
@@ -385,13 +385,16 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div><div class="ticker1"><img src="slide1/2.png"></div><div class="ticker2"><img src="slide1/2.png"></div><div class="clickTicker" onclick="clickTicker()"></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.png" width="1024" height="768" alt=""></div><div class="button" onclick="playVid()"></div><video id="trace" class="trace" width="1024" height="768"><source src="slide2/Lucaparib.mp4" type="video/mp4"></video><div class="click_here"><img src="slide2/3.png" alt=""></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
 	break;
     case 3:
 	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div>';
+	break;
+    case 4:
+	content='<link rel="stylesheet" type="text/css" href="slide4/slide4.css" media="screen"/><div class="background"><img src="slide4/1.jpg" width="1024" height="768" alt=""></div>';
 	break;
 }
 
@@ -535,20 +538,7 @@ $(document).ready(function(){
 })
 
 
-
-        function playVid() {
-            $('#trace').trigger('play');
-			$('.button').css("display","none");
-			$('.click_here').css("display","none");
-        }
-
-
-/* function playvid() {
-	$('.trace').get(0).play();
+function clickTicker() {
+	$(".ticker1").addClass("rotateAntiClock");
+	$(".ticker2").addClass("rotateClock");
 }
-
-var vid = document.getElementById("trace"); 
-
-function playVid() { 
-  vid.play(); 
-}  */
