@@ -198,7 +198,7 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 	
  } 
  
-	if(nextSlideNo <= 4){//number 3 is number of total slides present
+	if(nextSlideNo <= 5){//number 3 is number of total slides present
 	// alert(nextSlideNo);
 	var tempNext = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo);
 
@@ -271,7 +271,7 @@ if(direction == 'b') {
 //custom slide changes ends here....
 
 	else{
-	if(page_id >= 0){
+	if(page_id >= 4){
 		page_id = page_id - 1;
 		//alert(page_id);
 		//console.log(page_id);
@@ -302,10 +302,10 @@ if(direction == 'b') {
 //custom slide changes ends here....
 
 	else{
-	if(page_id <= 4){
+	if(page_id <= 5){
 		page_id = page_id + 1;
 		//alert(page_id);
-		if(page_id == 5){
+		if(page_id == 6){
             flag=1;
         }
 	}
@@ -385,7 +385,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div><div class="ticker1"><img src="slide1/2.png"></div><div class="ticker2"><img src="slide1/2.png"></div><div class="clickTicker" onclick="clickTicker()"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
 	break;
 	case 2:
 	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
@@ -395,6 +395,9 @@ switch(pg_id){
 	break;
     case 4:
 	content='<link rel="stylesheet" type="text/css" href="slide4/slide4.css" media="screen"/><div class="background"><img src="slide4/1.jpg" width="1024" height="768" alt=""></div>';
+	break;
+	case 5:
+	content='<link rel="stylesheet" type="text/css" href="slide5/slide5.css" media="screen"/><div class="background"><img src="slide5/1.jpg" width="1024" height="768" alt=""></div>';
 	break;
 }
 
@@ -464,18 +467,22 @@ function open_page(url,page_id){
 	document.getElementById("click_through").innerHTML='';
 
 	if(currentslide == 1){
-	document.getElementById("click_through").innerHTML='';
+	document.getElementById("click_through").innerHTML='<div id="buttons"><button name="button" style="opacity: 0.0;position:absolute; left:0px; top:0px; z-index:899; width:1024px; height:768px;"></button></div><div id="buttons"><button name="button" style="opacity: 0.0;position:absolute; left:607px; top:506px; z-index:999; width:185px; height:83px;" value="OK" onclick="checkBtns(1)"></button></div><div id="buttons"><button name="button" style="opacity: 0.0;position:absolute; left:810px; top:506px; z-index:999; width:185px; height:83px;" value="OK" onclick="checkBtns(2)"></button></div>';
 		}
     if(currentslide == 2){
-	document.getElementById("click_through").innerHTML='';
+	document.getElementById("click_through").innerHTML='<div id="buttons"><button name="button" style="opacity: 0.0;position:absolute; left:0px; top:0px; z-index:899; width:1024px; height:768px;"></button></div><div id="buttons"><button name="button" style="opacity: 0.0;position:absolute; left:628px; top:466px; z-index:999; width:185px; height:83px;" value="OK" onclick="checkBtns(2)"></button></div><div id="buttons"><button name="button" style="opacity: 0.0;position:absolute; left:831px; top:466px; z-index:999; width:185px; height:83px;" value="OK" onclick="checkBtns(2)"></button></div>';
 		}
 
 	}
 
+
 	function checkBtns(refNum){
 		switch(refNum){
 			case 1:
-			open_page('',1);
+			open_page('',2);
+            break;
+			case 2:
+			open_page('',3);
             break;
 		}
 	}
@@ -536,9 +543,3 @@ $(document).ready(function(){
 		$('.touchbtn').css("display","block");
 	})
 })
-
-
-function clickTicker() {
-	$(".ticker1").addClass("rotateAntiClock");
-	$(".ticker2").addClass("rotateClock");
-}
