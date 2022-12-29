@@ -388,7 +388,7 @@ switch(pg_id){
 	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div><div class="s1_3"><img src="slide1/3.png" width="49" height="59" alt=""></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div><div class="s2_2"><img src="slide2/2.png"/></div><div class="s2_3"><img src="slide2/3.png"/></div><div class="s2_4"><img src="slide2/4.gif" width="1024" height="768"/></div>';
 	break;
     case 3:
 	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div>';
@@ -464,7 +464,7 @@ function open_page(url,page_id){
 	document.getElementById("click_through").innerHTML='';
 
 	if(currentslide == 1){
-	document.getElementById("click_through").innerHTML='<div id="buttons"><button name="button" style="opacity: 0.0;position:absolute; left:0px; top:0px; z-index:899; width:1024px; height:768px;"></button></div><div id="buttons"><button name="button" style="opacity: 0.0;position:absolute; left:581px; top:435px; z-index:999; width:343px; height:208px;" value="OK" onclick="checkBtns(1)"></button></div>';
+	document.getElementById("click_through").innerHTML='<div id="buttons"><button name="button" style="opacity: 0.0;position:absolute; left:0px; top:0px; z-index:899; width:1024px; height:768px;"></button></div><div id="buttons"><button name="button" style="opacity: 0.0;position:absolute; left:581px; top:435px; z-index:999; width:343px; height:208px;" value="OK" onclick="checkBtns(1);blast();"></button></div>';
 
 	$('.reference').css("display","none");
 	}
@@ -540,3 +540,9 @@ $(document).ready(function(){
 		$('.touchbtn').css("display","block");
 	})
 })
+
+function blast() {
+	setTimeout(function () {
+		$('.s2_4').css("display","block");
+	}, 2500);
+}

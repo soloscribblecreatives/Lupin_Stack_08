@@ -1,10 +1,69 @@
 * {
-	margin: 0px;
-	padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .background {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
+	z-index: 1;
+}
+
+.s2_2 {
+  position: absolute;
+  left: 512px;
+  top: 0px;
+  width: 513px;
+  height: 767px;
+  animation: slideOutRight 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  z-index: 10;
+}
+
+.s2_2_slide {
+  position: absolute;
+  left: 512px;
+  top: 0px;
+  width: 513px;
+  height: 767px;
+  animation: slideOutRight 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  z-index: 10;
+}
+
+.s2_3 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 512px;
+  height: 768px;
+  animation: slideOutLeft 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  z-index: 10;
+}
+
+.s2_3_slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 512px;
+  height: 768px;
+  animation: slideOutLeft 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  z-index: 10;
+}
+
+.s2_4 {
+  position: absolute;
+  top: 0px;
+  animation: fadeOut 1s;
+  animation-delay: 4s;
+  animation-fill-mode: both;
+  display: none;
+  z-index: 6;
 }
