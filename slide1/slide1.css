@@ -7,4 +7,42 @@
 	position: absolute;
 	width: 1024px;
 	height: 768px;
+	z-index: 1;
+}
+
+.s1_2 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 5;
+}
+
+.s1_3 {
+	position: absolute;
+  left: 732px;
+  top: 635px;
+  width: 49px;
+  height: 59px;
+	animation: flash 3s infinite;
+	animation-delay: 0.5s;
+	animation-fill-mode: both;
+	z-index: 3;
+}
+
+.s1_pop1 {
+	position: absolute;
+  left: 115px;
+  top: 350px;
+  width: 251px;
+  height: 322px;
+	z-index: 3;
+}
+
+.s1_c1ose1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 7;
 }
