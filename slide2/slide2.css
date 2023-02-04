@@ -1,9 +1,9 @@
-* {
-  margin: 0px;
-  padding: 0px;
+*{
+	margin: 0px;
+	padding: 0px;
 }
 
-.background {
+.s2_1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
@@ -11,59 +11,61 @@
 }
 
 .s2_2 {
-  position: absolute;
-  left: 512px;
-  top: 0px;
-  width: 513px;
-  height: 767px;
-  animation: slideOutRight 2s;
-  animation-delay: 0.5s;
-  animation-fill-mode: both;
-  z-index: 10;
-}
-
-.s2_2_slide {
-  position: absolute;
-  left: 512px;
-  top: 0px;
-  width: 513px;
-  height: 767px;
-  animation: slideOutRight 2s;
-  animation-delay: 0.5s;
-  animation-fill-mode: both;
-  z-index: 10;
+	position: absolute;
+  left: 147px;
+  top: 33px;
+  width: 730px;
+  height: 186px;
+	animation: zoomIn 0.7s;
+	animation-delay: 0.2s;
+	animation-fill-mode: both;
+	z-index: 2;
 }
 
 .s2_3 {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 512px;
-  height: 768px;
-  animation: slideOutLeft 2s;
-  animation-delay: 0.5s;
-  animation-fill-mode: both;
-  z-index: 10;
-}
-
-.s2_3_slide {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 512px;
-  height: 768px;
-  animation: slideOutLeft 2s;
-  animation-delay: 0.5s;
-  animation-fill-mode: both;
-  z-index: 10;
+	position: absolute;
+  left: 247px;
+  top: 239px;
+  width: 530px;
+  height: 36px;
+	animation: fadeInLeft 0.7s;
+	animation-delay: 0.5s;
+	animation-fill-mode: both;
+	z-index: 3;
 }
 
 .s2_4 {
-  position: absolute;
-  top: 0px;
-  animation: fadeOut 1s;
-  animation-delay: 4s;
-  animation-fill-mode: both;
-  display: none;
-  z-index: 6;
+	position: absolute;
+  left: 369px;
+  top: 403px;
+  width: 259px;
+  height: 182px;
+	animation: zoomIn 0.7s;
+	animation-delay: 1.5s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s2_5 {
+	position: absolute;
+  left: 86px;
+  top: 331px;
+  width: 287px;
+  height: 341px;
+	animation: fadeInLeft 1s;
+	animation-delay: 2.5s;
+	animation-fill-mode: both;
+	z-index: 3;
+}
+
+.s2_6 {
+	position: absolute;
+  left: 624px;
+  top: 328px;
+  width: 313px;
+  height: 333px;
+	animation: fadeInRight 1s;
+	animation-delay: 2.5s;
+	animation-fill-mode: both;
+	z-index: 3;
 }
