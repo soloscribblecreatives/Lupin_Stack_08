@@ -3091,8 +3091,8 @@ Copyright (c) 2015 Daniel Eden
 
 @-webkit-keyframes slideInRight {
   0% {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(120%, 0, 0);
+    transform: translate3d(120%, 0, 0);
     visibility: visible;
   }
 
@@ -3104,8 +3104,8 @@ Copyright (c) 2015 Daniel Eden
 
 @keyframes slideInRight {
   0% {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(120%, 0, 0);
+    transform: translate3d(120%, 0, 0);
     visibility: visible;
   }
 

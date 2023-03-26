@@ -225,7 +225,6 @@ html[xmlns] .clearfix {
 	background-image: url(close.png);
 	bottom: 157px;
 }
-
 #myconsole {
 	display: none;
 	position: fixed;
@@ -237,13 +236,4 @@ html[xmlns] .clearfix {
 	border: 1px solid red;
 	background-color: rgba(0,0,0,0.5);
 	color: #ffffff;
-}
-
-.home {
-	position:absolute;
-	right:1px;
-	bottom:0px;
-	width:80px;
-	height:80px;
-	z-index:15;
 }
