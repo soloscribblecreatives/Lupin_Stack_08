@@ -1,54 +1,10 @@
 * {
-  margin: 0px;
-  padding: 0px;
+	margin: 0px;
+	padding: 0px;
 }
 
-.s2_1 {
-  position: absolute;
-  width: 1024px;
-  height: 768px;
-  z-index: 1;
-}
-
-.mock {
-  position: absolute;
-  left: 53px;
-  top: 332px;
-  width: 608px;
-  height: 349px;
-  overflow: hidden;
-  z-index: 5;
-}
-
-.s2_2 {
-  position: absolute;
-  left: 336px;
-  top: 71px;
-  width: 243px;
-  height: 251px;
-  animation: slideInRight 1s;
-  animation-delay: 0s;
-  animation-fill-mode: both;
-  display: none;
-  z-index: 2;
-}
-
-.s2_3 {
-  position: absolute;
-  left: 693px;
-  top: 504px;
-  width: 308px;
-  height: 75px;
-  animation: zoomIn 1s;
-  animation-delay: 1s;
-  animation-fill-mode: both;
-  display: none;
-  z-index: 2;
-}
-
-.animate2 {
-  position: absolute;
-  width: 1024px;
-  height: 768px;
-  z-index: 50;
+.background {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
 }
