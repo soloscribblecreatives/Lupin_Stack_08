@@ -3,62 +3,62 @@
 	padding: 0px;
 }
 
-.s1_1 {
+.s6_1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
 	z-index: 1;
 }
 
-.s1_2 {
+.s6_2 {
 	position: absolute;
-  left: 166px;
-  top: 477px;
-  width: 247px;
-  height: 65px;
-	animation: flashLong 2.5s infinite;
+  left: 576px;
+  top: 325px;
+  width: 448px;
+  height: 443px;
+	animation: fadeInUp 0.3s;
 	animation-delay: 0s;
 	animation-fill-mode: both;
 	z-index: 4;
 }
 
-.s1_3 {
+.s6_3 {
 	position: absolute;
-  left: 582px;
-  top: 477px;
-  width: 227px;
-  height: 55px;
+  left: 732px;
+  top: 522px;
+  width: 203px;
+  height: 203px;
+	animation: zoomIn 0.3s;
+	animation-delay: 0.3s;
+	animation-fill-mode: both;
+	z-index: 6;
+}
+
+.s6_4 {
+	position: absolute;
+  left: 386px;
+  top: 72px;
+  width: 436px;
+  height: 292px;
 	animation: flashLong 2.5s infinite;
-	animation-delay: 0s;
+	animation-delay: 1s;
 	animation-fill-mode: both;
-	z-index: 3;
+	z-index: 8;
 }
 
-.s1_4 {
+.s6_5 {
 	position: absolute;
-  left: 178px;
-  top: 501px;
-  width: 316px;
-  height: 233px;
-	animation: fadeInLeft 1s;
-	animation-delay: 2s;
-	animation-fill-mode: both;
-	z-index: 2;
-}
-
-.s1_5 {
-	position: absolute;
-  left: 546px;
-  top: 502px;
-  width: 311px;
-  height: 232px;
+  left: 425px;
+  top: 457px;
+  width: 542px;
+  height: 238px;
 	animation: fadeInRight 1s;
-	animation-delay: 2.5s;
+	animation-delay: 3.5s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
 
-.s1_6 {
+.s6_6 {
 	position: absolute;
   left: 725px;
   top: 282px;
@@ -70,7 +70,7 @@
 	z-index: 2;
 }
 
-.s1_7 {
+.s6_7 {
 	position: absolute;
   left: 82px;
   top: 366px;
@@ -82,7 +82,7 @@
 	z-index: 2;
 }
 
-.s1_8 {
+.s6_8 {
 	position: absolute;
   left: 516px;
   top: 321px;
@@ -95,7 +95,7 @@
 	z-index: 2;
 }
 
-.s1_9 {
+.s6_9 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
@@ -103,7 +103,7 @@
 	z-index: 10;
 }
 
-.s1_pop1 {
+.s6_pop1 {
 	position: absolute;
 	height: 100px;
 	width: 150px;
@@ -112,7 +112,7 @@
 	z-index: 15;
 }
 
-.s1_c1ose1 {
+.s6_c1ose1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
@@ -152,14 +152,4 @@
 .fadeInDownSmallSmall {
   -webkit-animation-name: fadeInDownSmall;
   animation-name: fadeInDownSmall;
-}
-
-@keyframes flashLong {
-  0%,  100% {
-    opacity: 0;
-  }
-
-  25%, 50%, 75% {
-    opacity: 1;
-  }
 }

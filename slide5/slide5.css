@@ -3,62 +3,62 @@
 	padding: 0px;
 }
 
-.s1_1 {
+.s5_1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
 	z-index: 1;
 }
 
-.s1_2 {
+.s5_2 {
 	position: absolute;
-  left: 166px;
-  top: 477px;
-  width: 247px;
-  height: 65px;
-	animation: flashLong 2.5s infinite;
+  left: 0px;
+  top: 302px;
+  width: 495px;
+  height: 466px;
+	animation: fadeInUp 0.3s;
 	animation-delay: 0s;
 	animation-fill-mode: both;
 	z-index: 4;
 }
 
-.s1_3 {
+.s5_3 {
 	position: absolute;
-  left: 582px;
-  top: 477px;
-  width: 227px;
-  height: 55px;
+  left: 98px;
+  top: 503px;
+  width: 205px;
+  height: 167px;
+	animation: zoomIn 0.3s;
+	animation-delay: 0.3s;
+	animation-fill-mode: both;
+	z-index: 6;
+}
+
+.s5_4 {
+	position: absolute;
+  left: 438px;
+  top: 117px;
+  width: 115px;
+  height: 290px;
 	animation: flashLong 2.5s infinite;
-	animation-delay: 0s;
+	animation-delay: 1s;
 	animation-fill-mode: both;
-	z-index: 3;
+	z-index: 8;
 }
 
-.s1_4 {
+.s5_5 {
 	position: absolute;
-  left: 178px;
-  top: 501px;
-  width: 316px;
-  height: 233px;
-	animation: fadeInLeft 1s;
-	animation-delay: 2s;
+  left: 754px;
+  top: 633px;
+  width: 112px;
+  height: 102px;
+	animation: stampIn 0.3s;
+	animation-delay: 1.8s;
 	animation-fill-mode: both;
-	z-index: 2;
+	z-index: 8;
 }
 
-.s1_5 {
-	position: absolute;
-  left: 546px;
-  top: 502px;
-  width: 311px;
-  height: 232px;
-	animation: fadeInRight 1s;
-	animation-delay: 2.5s;
-	animation-fill-mode: both;
-	z-index: 2;
-}
-
-.s1_6 {
+.s5_6 {
 	position: absolute;
   left: 725px;
   top: 282px;
@@ -70,7 +70,7 @@
 	z-index: 2;
 }
 
-.s1_7 {
+.s5_7 {
 	position: absolute;
   left: 82px;
   top: 366px;
@@ -82,7 +82,7 @@
 	z-index: 2;
 }
 
-.s1_8 {
+.s5_8 {
 	position: absolute;
   left: 516px;
   top: 321px;
@@ -95,7 +95,7 @@
 	z-index: 2;
 }
 
-.s1_9 {
+.s5_9 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
@@ -103,7 +103,7 @@
 	z-index: 10;
 }
 
-.s1_pop1 {
+.s5_pop1 {
 	position: absolute;
 	height: 100px;
 	width: 150px;
@@ -112,7 +112,7 @@
 	z-index: 15;
 }
 
-.s1_c1ose1 {
+.s5_c1ose1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
@@ -153,6 +153,33 @@
   -webkit-animation-name: fadeInDownSmall;
   animation-name: fadeInDownSmall;
 }
+
+
+
+@keyframes revealHorizontal {
+  0% {
+    clip: rect(0px,0px,540px,0px);
+	opacity: 1;
+  }
+  
+  100% {
+    clip: rect(0px,850px,540px,0px);
+	opacity: 1;
+  }
+}
+
+@keyframes stampIn {
+	0%	{
+		transform-origin: 50% 50%;
+		transform: scale(3);
+		opacity: 0;
+	}
+	100%	{
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
 
 @keyframes flashLong {
   0%,  100% {

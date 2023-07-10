@@ -3,62 +3,62 @@
 	padding: 0px;
 }
 
-.s1_1 {
+.s9_1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
 	z-index: 1;
 }
 
-.s1_2 {
+.s9_2 {
 	position: absolute;
-  left: 166px;
-  top: 477px;
-  width: 247px;
-  height: 65px;
-	animation: flashLong 2.5s infinite;
+  left: 0px;
+  top: 243px;
+  width: 581px;
+  height: 525px;
+	animation: fadeInUp 0.3s;
 	animation-delay: 0s;
 	animation-fill-mode: both;
 	z-index: 4;
+}  
+
+.s9_3 {
+	position: absolute;
+  left: 154px;
+  top: 468px;
+  width: 218px;
+  height: 203px;
+	animation: zoomIn 0.3s;
+	animation-delay: 0.3s;
+	animation-fill-mode: both;
+	z-index: 6;
 }
 
-.s1_3 {
+.s9_4 {
 	position: absolute;
-  left: 582px;
-  top: 477px;
-  width: 227px;
-  height: 55px;
-	animation: flashLong 2.5s infinite;
-	animation-delay: 0s;
+  left: 624px;
+  top: 232px;
+  width: 69px;
+  height: 69px;
+	animation: rotateIn 0.5s;
+	animation-delay: 0.8s;
+	animation-fill-mode: both;
+	z-index: 7;
+}
+
+.s9_5 {
+	position: absolute;
+  left: 624px;
+  top: 368px;
+  width: 69px;
+  height: 68px;
+	animation: rotateIn 0.5s;
+	animation-delay: 1.2s;
 	animation-fill-mode: both;
 	z-index: 3;
 }
 
-.s1_4 {
-	position: absolute;
-  left: 178px;
-  top: 501px;
-  width: 316px;
-  height: 233px;
-	animation: fadeInLeft 1s;
-	animation-delay: 2s;
-	animation-fill-mode: both;
-	z-index: 2;
-}
-
-.s1_5 {
-	position: absolute;
-  left: 546px;
-  top: 502px;
-  width: 311px;
-  height: 232px;
-	animation: fadeInRight 1s;
-	animation-delay: 2.5s;
-	animation-fill-mode: both;
-	z-index: 2;
-}
-
-.s1_6 {
+.s9_6 {
 	position: absolute;
   left: 725px;
   top: 282px;
@@ -70,7 +70,7 @@
 	z-index: 2;
 }
 
-.s1_7 {
+.s9_7 {
 	position: absolute;
   left: 82px;
   top: 366px;
@@ -82,7 +82,7 @@
 	z-index: 2;
 }
 
-.s1_8 {
+.s9_8 {
 	position: absolute;
   left: 516px;
   top: 321px;
@@ -95,7 +95,7 @@
 	z-index: 2;
 }
 
-.s1_9 {
+.s9_9 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
@@ -103,7 +103,7 @@
 	z-index: 10;
 }
 
-.s1_pop1 {
+.s9_pop1 {
 	position: absolute;
 	height: 100px;
 	width: 150px;
@@ -112,7 +112,7 @@
 	z-index: 15;
 }
 
-.s1_c1ose1 {
+.s9_c1ose1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
@@ -154,12 +154,23 @@
   animation-name: fadeInDownSmall;
 }
 
-@keyframes flashLong {
-  0%,  100% {
-    opacity: 0;
-  }
+@keyframes rotateInLoop {
+	0%  {
+		-webkit-transform: rotate(0deg);
+	}
+	100%	{
+		-webkit-transform: rotate(359deg);
+	}
+}
 
-  25%, 50%, 75% {
-    opacity: 1;
+@keyframes rotate-animation {
+	0% {
+		transform: rotate(0deg);
   }
+  50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
