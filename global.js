@@ -5,6 +5,7 @@ var startLoc = null;
 var contentName = parseInt(localStorage.getItem("currentbrand"));
 var currentContentId  = parseInt(localStorage.getItem('currentcontent'));
 //ends
+
 checkClickThrough();
 
 document.getElementById("main_content").addEventListener("touchmove", touchHandler, false);
@@ -68,7 +69,6 @@ function touchHandler(e) {
 
 		$("#main_content").swipe({
 	   swipeLeft:function(event, direction, distance, duration, fingerCount) {
-		
 		//alert("swipeleft");
 		//myconsole("swipeleft");
 		var page_id =  parseInt($("#wrapper").attr("rel"));
@@ -82,7 +82,6 @@ function touchHandler(e) {
 	  },
 
 	  swipeRight:function(event, direction, distance, duration, fingerCount) {
-		
 			//alert("swiperight");
 		//myconsole("swiperight");
 		var page_id =  parseInt($("#wrapper").attr("rel"));
@@ -101,55 +100,19 @@ function touchHandler(e) {
         //Default is 75px, set to 0 for demo so any distance triggers swipe
          threshold:0
 	});
-});
 
+
+});
 
 
 function go_nav(direction) {
 var page_id =  parseInt($("#wrapper").attr("rel"));
-															 
-					
-				   
- 
-										 
- 
-																																	   
-
 			
-																					 
-   
-	
-								  
 		
-   
-													   
-	
-		
-									
-
-		   
-						  
-															   
-																			
-				   
-																  
 var flag=0;
 if(direction == 'b') {
 
-										 
 
-																									 
-																																		
-		 
-																				
-																																					
-
-
-  
- 
-									
-
-	  
 	if(page_id >= 0){
 		page_id = page_id - 1;
 		//alert(page_id);
@@ -173,7 +136,7 @@ if(direction == 'b') {
   "callback" : "checkLastPgFn"
   };
 
-	//window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
+	window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
 	
 		//window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
     }else{
@@ -190,27 +153,16 @@ if(direction == 'b') {
   "callback" : "checkLastPgFn"
   };
 
-	//window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
+	window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
 	}
 	
 }else {
 	
-										 
 
-																																	 
-		 
-																				
-
-																																					
-  
- 
-									
-
-	  
-	if(page_id <= 5){
+	if(page_id <= 1){
 		page_id = page_id + 1;
 		//alert(page_id);
-		if(page_id == 6){
+		if(page_id == 2){
             flag=1;
         }
 	}
@@ -230,7 +182,7 @@ if(direction == 'b') {
   };
 
 
-	//window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
+	window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
 		 //window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
     }else{
         localStorage.setItem("gotoNextPrevBrand" ,0);
@@ -246,17 +198,13 @@ if(direction == 'b') {
   "callback" : "checkLastPgFn"
   };
 
-	//window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
+	window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
   
     }
 
 
 }
- 
 
-
-		 
-																	
 
 
 $("#wrapper").attr("rel",page_id);
@@ -269,7 +217,7 @@ var pg_content = set_pg_content(page_id);
 }
 	//console.log("pg : "+page_id);
 	if(page_id==4){
-		$(".box2").click(function(event) {
+		/* $(".box2").click(function(event) {
 			open_page("",5)
 		});
 		$(".box3").click(function(event) {
@@ -289,35 +237,21 @@ var pg_content = set_pg_content(page_id);
 	 	});
 		$(".box8").click(function(event) {
 	 		open_page("",11)
-	 	});
+	 	}); */
 		
 	}
 	 checkClickThrough();
 }
 
 function set_pg_content(pg_id){
-//step 6:-
-//console.log("++++++++pg_id++++"+pg_id+"+++++++currentslide++++++"+localStorage.getItem("currentslide")+"++++++previousslide++++++"+localStorage.getItem("previousslide"));
-	
 $(".reference").removeClass("active");
 currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.gif" width="1024" height="768" alt=""></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div><div class="s1_9"><img src="slide1/s1_9.png"/></div><div class="s1_10"><img src="slide1/s1_10.png"/></div><div class="s1_11"><img src="slide1/s1_11.png"/></div><div class="s1_12"><img src="slide1/s1_12.png"/></div><div class="s1_13"><img src="slide1/s1_13.gif"/></div>';
 	break;
-	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide1.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide1.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 4:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide1.css" media="screen"/><div class="background"><img src="slide4/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-    case 5:
-	content='<link rel="stylesheet" type="text/css" href="slide5/slide4.css" media="screen"/><div class="background"><img src="slide5/1.jpg" width="1024" height="768" alt=""></div></div><div class="popup"><img src="slide5/2.jpg" width="1024" height="768" alt=""/></div><div class="pop_open" onclick="pop_open()"></div><div class="pop_close" onclick="pop_close()"></div>';
-	break;
+
 }
 
 return content;
@@ -331,9 +265,8 @@ function showDiv2() {
    document.getElementById('welcomeDiv2').style.display = "block";
 }
 
-
 function open_page(url,page_id){
- //alert("===openpage====");
+	 //alert("===openpage====");
 	localStorage.getItem('currentbrand');
     localStorage.getItem('currentcontent');
     localStorage.getItem('currentcontentbrandId');
@@ -357,8 +290,7 @@ function open_page(url,page_id){
   "callback" : "checkLastPgFn"
   };
 
-	//window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
-	
+	window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
 
 	 $("#wrapper").attr("rel",page_id);
 	 var content="";
@@ -403,7 +335,6 @@ function open_page(url,page_id){
     if(currentslide == 2){
 	document.getElementById("click_through").innerHTML='';
 		}
-
 	}
 
 	function checkBtns(refNum){
@@ -460,6 +391,8 @@ function currentTimeInDatabaseFormat(){//to get current time in dd-mm-yyyy hh:mm
 	return duration;
 }
 
+// new js
+
 $(document).ready(function(){
 	$('body').on('click','.touchbtn',function(){
 		$('.right_arrow').trigger( "click" );
@@ -470,17 +403,3 @@ $(document).ready(function(){
 		$('.touchbtn').css("display","block");
 	})
 })
-
-/*--------------------- animation javascript -----------------------*/
-
-function pop_open() {
-	$('.popup').css("display","block");
-	$('.pop_close').css("display","block");
-	$('.pop_open').css("display","none");
-}
-
-function pop_close() {
-	$('.popup').css("display","none");
-	$('.pop_close').css("display","none");
-	$('.pop_open').css("display","block");
-}
