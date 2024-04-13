@@ -10,6 +10,13 @@
 	z-index: 1;
 }
 
+.background {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
 .clickTreat {
   position: absolute;
   left: 427px;
