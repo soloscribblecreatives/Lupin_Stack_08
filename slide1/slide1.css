@@ -10,84 +10,51 @@
 	z-index: 1;
 }
 
-.background {
-	position: absolute;
-	width: 1024px;
-	height: 768px;
-	z-index: 1;
-}
-
-.clickTreat {
-  position: absolute;
-  left: 427px;
-  top: 589px;
-  width: 421px;
-  height: 137px;
-  z-index: 30;
-}
-
-
 .s1_2 {
 	position: absolute;
-  left: 381px;
-  top: 166px;
-  width: 484px;
-  height: 67px;
-	animation: flipInX 0.5s;
-	animation-delay: 0s;
+  left: 83px;
+  top: 588px;
+  width: 180px;
+  height: 65px;
+	animation: fadeInUp 0.7s;
+	animation-delay: 0.2s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
 .s1_3 {
 	position: absolute;
-  left: 548px;
-  top: 352px;
-  width: 50px;
-  height: 49px;
-	animation: flashIt 2s infinite;
-	animation-delay: 0s;
+  left: 308px;
+  top: 586px;
+  width: 181px;
+  height: 67px;
+	animation: fadeInUp 0.7s;
+	animation-delay: 0.8s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
-@keyframes flashIt {
-  0%, 50%, 100% {
-    opacity: 0.5;
-  }
-
-  25%, 75% {
-    opacity: 1;
-  }
-}
-
 .s1_4 {
 	position: absolute;
-  left: 565px;
-  top: 366px;
-  width: 19px;
-  height: 21px;
-	animation: rotateInLoop 2s infinite linear;
-	animation-delay: 0s;
+  left: 534px;
+  top: 586px;
+  width: 181px;
+  height: 67px;
+	animation: fadeInUp 0.7s;
+	animation-delay: 1.4s;
 	animation-fill-mode: both;
-	z-index: 10;
-}
-
-@keyframes rotateInLoop {
-	0%  {
-		-webkit-transform: rotate(0deg);
-	}
-	100%	{
-		-webkit-transform: rotate(359deg);
-	}
+	z-index: 5;
 }
 
 .s1_5 {
 	position: absolute;
-  left: 381px;
-  top: 128px;
-  width: 484px;
-  height: 67px;
+  left: 761px;
+  top: 588px;
+  width: 179px;
+  height: 65px;
+	animation: fadeInUp 0.7s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
 	z-index: 5;
 }
 
@@ -100,7 +67,6 @@
 	animation: fadeInDownSmall 0.5s;
 	animation-delay: 1.4s;
 	animation-fill-mode: both;
-	display: none;
 	z-index: 5;
 }
 
@@ -113,7 +79,6 @@
 	animation: bounceIn 0.3s;
 	animation-delay: 1.8s;
 	animation-fill-mode: both;
-	display: none;
 	z-index: 5;
 }
 
@@ -126,7 +91,6 @@
 	animation: fadeInDownSmall 0.5s;
 	animation-delay: 2.2s;
 	animation-fill-mode: both;
-	display: none;
 	z-index: 5;
 }
 
@@ -139,7 +103,6 @@
 	animation: bounceIn 0.3s;
 	animation-delay: 2.6s;
 	animation-fill-mode: both;
-	display: none;
 	z-index: 5;
 }
 
@@ -152,7 +115,6 @@
 	animation: fadeInDownSmall 0.5s;
 	animation-delay: 3s;
 	animation-fill-mode: both;
-	display: none;
 	z-index: 5;
 }
 
@@ -165,7 +127,6 @@
 	animation: bounceIn 0.3s;
 	animation-delay: 3.4s;
 	animation-fill-mode: both;
-	display: none;
 	z-index: 5;
 }
 
@@ -178,7 +139,6 @@
 	animation: fadeInDownSmall 0.5s;
 	animation-delay: 3.8s;
 	animation-fill-mode: both;
-	display: none;
 	z-index: 5;
 }
 
@@ -191,7 +151,6 @@
 	animation: bounceIn 0.3s;
 	animation-delay: 4.2s;
 	animation-fill-mode: both;
-	display: none;
 	z-index: 5;
 }
 
@@ -204,7 +163,6 @@
 	animation: fadeInDownSmall 0.5s;
 	animation-delay: 4.6s;
 	animation-fill-mode: both;
-	display: none;
 	z-index: 5;
 }
 
