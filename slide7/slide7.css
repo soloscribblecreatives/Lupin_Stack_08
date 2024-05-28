@@ -12,11 +12,11 @@
 
 .s2 {
 	position: absolute;
-  left: 166px;
-  top: 338px;
-  width: 245px;
-  height: 107px;
-	animation: slideInRight 0.5s;
+  left: 100px;
+  top: 140px;
+  width: 835px;
+  height: 159px;
+	animation: zoomInDown 1s;
 	animation-delay: 0s;
 	animation-fill-mode: both;
 	z-index: 5;
@@ -24,120 +24,121 @@
 
 .s3 {
 	position: absolute;
-  left: 181px;
-  top: 455px;
-  width: 677px;
-  height: 182px;
-	animation: zoomInDown 1s;
-	animation-delay: 0.5s;
+  left: 760px;
+  top: 93px;
+  width: 107px;
+  height: 52px;
+	animation: revealVerticalRev 0.5s infinite;
+	animation-delay: 0.8s;
 	animation-fill-mode: both;
+	clip: rect(60px,110px,60px,0px);
 	z-index: 5;
 }
 
 .s4 {
 	position: absolute;
-  left: 656px;
-  top: 439px;
-  width: 209px;
-  height: 208px;
-	animation: fadeInDownSmall 0.5s;
-	animation-delay: 0.6s;
+  left: 64px;
+  top: 424px;
+  width: 178px;
+  height: 96px;
+	animation: zoomIn 0.5s;
+	animation-delay: 2s;
 	animation-fill-mode: both;
-	z-index: 5;
+	z-index: 3;
 }
 
 .s5 {
 	position: absolute;
-  left: 715px;
-  top: 493px;
-  width: 104px;
-  height: 97px;
-	animation: bounceIn 0.3s;
-	animation-delay: 1s;
+  left: 32px;
+  top: 542px;
+  width: 219px;
+  height: 70px;
+	animation: zoomInDown 1s;
+	animation-delay: 2s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
 .s6 {
 	position: absolute;
-  left: 252px;
-  top: 446px;
-  width: 173px;
-  height: 108px;
-	animation: fadeInDownSmall 0.5s;
-	animation-delay: 1.4s;
+  left: 308px;
+  top: 423px;
+  width: 150px;
+  height: 96px;
+	animation: zoomIn 1s;
+	animation-delay: 3s;
 	animation-fill-mode: both;
-	z-index: 5;
+	z-index: 3;
 }
 
 .s7 {
 	position: absolute;
-  left: 465px;
-  top: 272px;
-  width: 155px;
-  height: 155px;
-	animation: bounceIn 0.3s;
-	animation-delay: 1.8s;
+  left: 269px;
+  top: 536px;
+  width: 223px;
+  height: 95px;
+	animation: zoomInDown 1s;
+	animation-delay: 3s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
 .s8 {
 	position: absolute;
-  left: 488px;
-  top: 446px;
-  width: 109px;
-  height: 85px;
-	animation: fadeInDownSmall 0.5s;
-	animation-delay: 2.2s;
+  left: 563px;
+  top: 423px;
+  width: 174px;
+  height: 96px;
+	animation: zoomIn 1s;
+	animation-delay: 4s;
 	animation-fill-mode: both;
-	z-index: 5;
+	z-index: 3;
 }
 
 .s9 {
 	position: absolute;
-  left: 660px;
-  top: 272px;
-  width: 155px;
-  height: 155px;
-	animation: bounceIn 0.3s;
-	animation-delay: 2.6s;
+  left: 526px;
+  top: 542px;
+  width: 216px;
+  height: 70px;
+	animation: zoomInDown 1s;
+	animation-delay: 4s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
 .s10 {
 	position: absolute;
-  left: 682px;
-  top: 446px;
-  width: 118px;
-  height: 78px;
-	animation: fadeInDownSmall 0.5s;
-	animation-delay: 3s;
+  left: 848px;
+  top: 424px;
+  width: 101px;
+  height: 95px;
+	animation: zoomIn 1s;
+	animation-delay: 5s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
 .s11 {
 	position: absolute;
-  left: 856px;
-  top: 272px;
-  width: 155px;
-  height: 155px;
-	animation: bounceIn 0.3s;
-	animation-delay: 3.4s;
+  left: 793px;
+  top: 542px;
+  width: 185px;
+  height: 41px;
+	animation: zoomInDown 1s;
+	animation-delay: 5s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
 .s12 {
 	position: absolute;
-  left: 871px;
-  top: 446px;
-  width: 125px;
-  height: 109px;
-	animation: fadeInDownSmall 0.5s;
-	animation-delay: 3.8s;
+  left: 543px;
+  top: 636px;
+  width: 325px;
+  height: 57px;
+	animation: zoomInDown 1s;
+	animation-delay: 5s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
@@ -408,5 +409,15 @@
     opacity: 1;
     -webkit-transform: none;
     transform: none;
+  }
+}
+
+@keyframes revealVerticalRev {
+  0% {
+    clip: rect(60px,110px,60px,0px);
+  }
+  
+  100% {
+    clip: rect(0px,110px,60px,0px);
   }
 }
