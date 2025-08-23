@@ -1,86 +1,92 @@
 function runAnimation() {
-  window.requestAnimationFrame(function () {
+    window.requestAnimationFrame(function() {
 
-  const slider = document.getElementById("slider");
-  const ball = document.getElementById("ball");
-  const canvas = document.getElementById("canvas");
+        const slider = document.getElementById("slider");
+        const ball = document.getElementById("ball");
 
-  const sliderHeight = 540;
-  const ballStartSize = 100;
-  const ballEndSize = 150;
-  const ballEndPosition = 15;
+        const ballStartSize = 100;
+        const ballEndSize = 150;
+        const ballEndPosition = 15;
 
-  // Center position for slider
-  const sliderTop = (canvas.offsetHeight - sliderHeight) / 2;
-  const sliderBottom = sliderTop + sliderHeight;
+        let isDragging = false;
+        let isLocked = false; // 🔒 lock when ball reaches top
 
-  // Set initial ball position at bottom of slider
-  let ballY = sliderBottom - ball.offsetHeight/2;
-  ball.style.top = ballY + "px";
+        // --- INITIAL POSITION AT BOTTOM OF SLIDER ---
+        window.addEventListener("load", () => {
+            ball.style.width = ballStartSize + "px";
+            ball.style.height = ballStartSize + "px";
 
-  let isDragging = false;
+            // Ball centered horizontally on slider, bottom aligned
+            let ballY = slider.offsetTop + slider.offsetHeight - ballStartSize;
+            ball.style.top = ballY + "px";
+        });
 
-  function updateReveal(ballY) {
-    // Constrain within slider area
-    if (ballY < sliderTop - ball.offsetHeight/2) ballY = sliderTop - ball.offsetHeight/2;
-    if (ballY > sliderBottom - ball.offsetHeight/2) ballY = sliderBottom - ball.offsetHeight/2;
+        function updateReveal(y) {
+            if (isLocked) return;
 
-    ball.style.top = ballY + "px";
+            const sliderTop = slider.offsetTop;
+            const sliderBottom = slider.offsetTop + slider.offsetHeight;
 
-    // Calculate progress from bottom (0) to top (1)
-    let progress = 1 - (ballY - (sliderTop - ball.offsetHeight/2)) / (sliderBottom - sliderTop);
-    progress = Math.max(0, Math.min(1, progress));
+            // Constrain within slider range
+            if (y < sliderTop) y = sliderTop;
+            if (y > sliderBottom - ball.offsetHeight) y = sliderBottom - ball.offsetHeight;
 
-    // Reveal slider progressively
-    slider.style.opacity = 1;
-    let hiddenPercent = (1 - progress) * 100;
-    slider.style.clipPath = `inset(${hiddenPercent}% 0 0 0)`;
+            ball.style.top = y + "px";
 
-    // If reached top
-    if (progress === 1) {
-      ball.style.width = ballEndSize + "px";
-      ball.style.height = ballEndSize + "px";
-      ball.style.top = ballEndPosition + "px";
-	  setTimeout(function(){
-		  open_page("",3);
-	  }, 2000);
-      //alert("loading complete");
-    }
-	else {
-	  ball.style.width = ballStartSize + "px";
-      ball.style.height = ballStartSize + "px";
-	}
-  }
+            // Progress: 0 = bottom, 1 = top
+            let progress = 1 - (y - sliderTop) / (slider.offsetHeight - ball.offsetHeight);
+            progress = Math.max(0, Math.min(1, progress));
 
-  function startDrag(e) {
-    isDragging = true;
-    e.preventDefault();
-  }
+            // Reveal slider progressively
+            slider.style.opacity = 1;
+            slider.style.clipPath = `inset(${(1 - progress) * 100}% 0 0 0)`;
 
-  function drag(e) {
-    if (!isDragging) return;
-    let clientY = e.touches ? e.touches[0].clientY : e.clientY;
-    let rect = canvas.getBoundingClientRect();
-    let y = clientY - rect.top - ball.offsetHeight/2;
-    updateReveal(y);
-  }
+            // Lock at top
+            if (progress === 1 && !isLocked) {
+                isLocked = true;
+                ball.style.width = ballEndSize + "px";
+                ball.style.height = ballEndSize + "px";
+                ball.style.top = ballEndPosition + "px"; // stick at top
+                setTimeout(function() {
+                    open_page("", 3);
+                }, 1000);
+            } else {
+                ball.style.width = ballStartSize + "px";
+                ball.style.height = ballStartSize + "px";
+            }
 
-  function endDrag() {
-    isDragging = false;
-  }
+        }
 
-  // Mouse + Touch support
-  ball.addEventListener("mousedown", startDrag);
-  document.addEventListener("mousemove", drag);
-  document.addEventListener("mouseup", endDrag);
+        function startDrag(e) {
+            if (isLocked) return;
+            isDragging = true;
+            e.preventDefault();
+        }
 
-  ball.addEventListener("touchstart", startDrag);
-  document.addEventListener("touchmove", drag);
-  document.addEventListener("touchend", endDrag);
+        function drag(e) {
+            if (!isDragging || isLocked) return;
 
-  });
+            let clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            let parentRect = slider.parentElement.getBoundingClientRect();
+
+            // Y relative to parent container
+            let y = clientY - parentRect.top - ball.offsetHeight / 2;
+
+            updateReveal(y);
+        }
+
+        function endDrag() {
+            isDragging = false;
+        }
+
+        // --- EVENT LISTENERS (Mouse + Touch) ---
+        ball.addEventListener("mousedown", startDrag);
+        document.addEventListener("mousemove", drag);
+        document.addEventListener("mouseup", endDrag);
+
+        ball.addEventListener("touchstart", startDrag);
+        document.addEventListener("touchmove", drag);
+        document.addEventListener("touchend", endDrag);
+
+    });
 }
-
-
-
-  
