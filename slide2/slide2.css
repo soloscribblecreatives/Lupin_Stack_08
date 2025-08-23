@@ -5,30 +5,30 @@
 
 .s1 {
 	position: absolute;
-	width: 1024px;
-	height: 768px;
+	width: 1080px;
+	height: 810px;
 	z-index: 1;
 }
 
 .s2 {
 	position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 1024px;
-  height: 768px;
-	animation: fadeIn 1.5s;
-	animation-delay: 1s;
+  left: 123px;
+  top: 41px;
+  width: 516px;
+  height: 47px;
+	animation: fadeInDown 0.5s;
+	animation-delay: 0.2s;
 	animation-fill-mode: both;
-	z-index: 2;
+	z-index: 5;
 }
 
 .s3 {
 	position: absolute;
-  left: 594px;
-  top: 22px;
-  width: 390px;
-  height: 746px;
-	animation: slideInUp 0.7s;
+  left: 266px;
+  top: 97px;
+  width: 218px;
+  height: 39px;
+	animation: fadeInUp 0.5s;
 	animation-delay: 0.2s;
 	animation-fill-mode: both;
 	z-index: 5;
@@ -36,64 +36,68 @@
 
 .s4 {
 	position: absolute;
-  left: 600px;
-  top: 370px;
-  width: 92px;
-  height: 111px;
-	animation: fadeIn 2s;
-	animation-delay: 2.5s;
+  left: 832px;
+  top: 721px;
+  width: 145px;
+  height: 42px;
+	animation: none 1s;
+	animation-delay: 1s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
 .s5 {
 	position: absolute;
-  left: 342px;
-  top: 306px;
-  width: 285px;
-  height: 347px;
-	animation: flyBy 1.5s linear;
-	animation-delay: 1.2s;
+  left: 832px;
+  top: 721px;
+  width: 145px;
+  height: 41px;
+	animation: revealVerticalUp 1s infinite;
+	animation-delay: 0.7s;
 	animation-fill-mode: both;
+	clip: rect(50px,200px,50px,0px);
 	z-index: 5;
 }
 
-.s6 {
-	position: absolute;
-  left: 55px;
-  top: 550px;
-  width: 554px;
-  height: 166px;
-	animation: fadeInLeft 0.7s;
-	animation-delay: 4s;
-	animation-fill-mode: both;
-	z-index: 5;
+#canvas {
+    position: relative;
+    width: 1080px;
+    height: 810px;
+    background: none;
+    overflow: hidden;
+	z-index: 10;
+}
+  
+#slider {
+    position: absolute;
+    left: 84.2%;
+    top: 16.5%;
+	width: 35px;
+	height: 560px;
+    transform: translateX(-50%);
+    opacity: 0; /* Initially hidden */
+    clip-path: inset(100% 0 0 0); /* Hidden from top to bottom */
+    transition: opacity 0.3s ease;
+	z-index: 10;
+}
+  
+#ball {
+    position: absolute;
+	left: 84.4%;
+	width: 100px;
+	height: 100px;
+    transform: translateX(-50%);
+    cursor: grab;
+    touch-action: none;
+	z-index: 10;
 }
 
-
-
-@keyframes flyBy {
+@keyframes revealVerticalUp {
   0% {
-  opacity: 1;
-  left: -308px;
-  top: -94px;
-  width: 285px;
-  height: 347px;
+    clip: rect(50px,200px,50px,0px);
   }
-
-  70% {
-  opacity: 1;
-  left: 132px;
-  top: 266px;
-  width: 285px;
-  height: 347px;
-  }
-
+  
   100% {
-  opacity: 1;
-  left: 342px;
-  top: 306px;
-  width: 285px;
-  height: 347px;
+    clip: rect(0px,200px,50px,0px);
   }
 }
