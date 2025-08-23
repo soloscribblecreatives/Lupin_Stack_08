@@ -234,7 +234,7 @@ function go_nav(direction) {
                 "callback": "checkLastPgFn"
             };
 
-            //window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe //pageswipe
+            window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
 
             //window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
         } else {
@@ -251,7 +251,7 @@ function go_nav(direction) {
                 "callback": "checkLastPgFn"
             };
 
-            //window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe //pageswipe
+            window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
         }
 
     } else {
@@ -279,7 +279,7 @@ function go_nav(direction) {
             };
 
 
-            //window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe //pageswipe
+            window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
             //window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
         } else {
             localStorage.setItem("gotoNextPrevBrand", 0);
@@ -295,7 +295,7 @@ function go_nav(direction) {
                 "callback": "checkLastPgFn"
             };
 
-            //window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe //pageswipe
+            window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
 
         }
 
@@ -604,5 +604,5 @@ function savedata(answer, type, questionNumber, page_id) {
         "callback": "checkLastPgFn"
     };
 
-    //window.messageHandler.postMessage(JSON.stringify(params));
+    window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
 }
