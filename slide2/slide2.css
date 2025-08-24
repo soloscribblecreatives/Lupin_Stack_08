@@ -12,10 +12,10 @@
 
 .s2 {
 	position: absolute;
-  left: 123px;
-  top: 41px;
-  width: 516px;
-  height: 47px;
+  left: 30px;
+  top: 48px;
+  width: 472px;
+  height: 45px;
 	animation: fadeInDown 0.5s;
 	animation-delay: 0.2s;
 	animation-fill-mode: both;
@@ -24,10 +24,10 @@
 
 .s3 {
 	position: absolute;
-  left: 266px;
-  top: 97px;
-  width: 218px;
-  height: 39px;
+  left: 519px;
+  top: 48px;
+  width: 205px;
+  height: 37px;
 	animation: fadeInUp 0.5s;
 	animation-delay: 0.2s;
 	animation-fill-mode: both;

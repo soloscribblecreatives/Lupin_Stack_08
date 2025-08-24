@@ -12,24 +12,24 @@
 
 .s2 {
 	position: absolute;
-  left: 123px;
-  top: 41px;
-  width: 516px;
-  height: 47px;
-	animation: none 0.5s;
-	animation-delay: 0.1s;
+  left: 30px;
+  top: 48px;
+  width: 472px;
+  height: 45px;
+	animation: fadeInDown 0.5s;
+	animation-delay: 0.2s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
 .s3 {
 	position: absolute;
-  left: 266px;
-  top: 97px;
-  width: 218px;
-  height: 39px;
-	animation: none 0.5s;
-	animation-delay: 0.1s;
+  left: 519px;
+  top: 48px;
+  width: 205px;
+  height: 37px;
+	animation: fadeInUp 0.5s;
+	animation-delay: 0.2s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
