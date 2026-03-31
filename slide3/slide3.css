@@ -13,9 +13,9 @@
 .s2 {
 	position: absolute;
   left: 319px;
-  top: 38px;
-  width: 485px;
-  height: 228px;
+  top: 69px;
+  width: 471px;
+  height: 197px;
 	animation: fadeIn 0.5s;
 	animation-delay: 0.1s;
 	animation-fill-mode: both;
@@ -49,10 +49,10 @@
 
 .s5 {
 	position: absolute;
-  left: 287px;
-  top: 310px;
-  width: 543px;
-  height: 59px;
+  left: 230px;
+  top: 312px;
+  width: 652px;
+  height: 53px;
 	animation: fadeInUp 0.5s;
 	animation-delay: 1.5s;
 	animation-fill-mode: both;
@@ -61,11 +61,11 @@
 
 .s6 {
 	position: absolute;
-  left: 126px;
-  top: 404px;
-  width: 201px;
-  height: 264px;
-	animation: fadeInRight 0.5s;
+  left: 81px;
+  top: 420px;
+  width: 918px;
+  height: 255px;
+	animation: zoomIn 0.5s;
 	animation-delay: 2s;
 	animation-fill-mode: both;
 	z-index: 5;
@@ -73,12 +73,12 @@
 
 .s7 {
 	position: absolute;
-  left: 459px;
-  top: 404px;
-  width: 541px;
-  height: 267px;
+  left: 575px;
+  top: 410px;
+  width: 418px;
+  height: 226px;
 	animation: fadeInRight 0.5s;
-	animation-delay: 2.2s;
+	animation-delay: 2.5s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
@@ -90,7 +90,7 @@
   width: 244px;
   height: 128px;
 	animation: fadeInUp 0.5s;
-	animation-delay: 2.5s;
+	animation-delay: 2.3s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
