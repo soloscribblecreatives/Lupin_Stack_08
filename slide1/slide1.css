@@ -1,102 +1,123 @@
-*{
+* {
 	margin: 0px;
 	padding: 0px;
 }
 
 .s1 {
 	position: absolute;
-	width: 1024px;
-	height: 768px;
+	width: 1080px;
+	height: 810px;
 	z-index: 1;
 }
 
 .s2 {
 	position: absolute;
-  left: 697px;
-  top: 0px;
-  width: 383px;
-  height: 810px;
-	animation: slideInRight 0.5s;
-	animation-delay: 0.5s;
+  left: 244px;
+  top: 42px;
+  width: 392px;
+  height: 71px;
+	animation: fadeInRight 0.5s;
+	animation-delay: 0.2s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
-.hit_1, .hit_2, .hit_3, .hit_4, .hit_5, .hit_6, .hit_7  {
-  position: absolute;
-  width: 1080px;
-  height: 810px;
-  display: none;
-  z-index: 15;
+.s3 {
+	position: absolute;
+  left: 306px;
+  top: 161px;
+  width: 144px;
+  height: 19px;
+	animation: fadeInRight 0.5s;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+	z-index: 5;
 }
 
-.hit_pop1 {
+.s4 {
 	position: absolute;
-  left: 930px;
-  top: 360px;
-  width: 133px;
-  height: 133px;
-	z-index: 10;
+  left: 239px;
+  top: 197px;
+  width: 315px;
+  height: 42px;
+	animation: zoomIn 0.5s;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+	transform-origin: bottom left;
+	z-index: 5;
 }
 
-.hit_pop2 {
+.s5 {
 	position: absolute;
-  left: 10px;
-  top: 581px;
-  width: 133px;
-  height: 133px;
-	z-index: 10;
+  left: 254px;
+  top: 525px;
+  width: 431px;
+  height: 78px;
+	animation: fadeInLeft 0.5s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+	z-index: 5;
 }
 
-.hit_pop3 {
+.s6 {
 	position: absolute;
-  left: 930px;
-  top: 581px;
-  width: 133px;
-  height: 133px;
-	z-index: 10;
+  left: 556px;
+  top: 140px;
+  width: 97px;
+  height: 97px;
+	animation: flashLongOff 0.2s infinite;
+	animation-delay: 1.2s;
+	animation-fill-mode: both;
+	z-index: 5;
 }
 
-.hit_pop4 {
+.s7 {
 	position: absolute;
-  left: 513px;
-  top: 503px;
-  width: 140px;
-  height: 186px;
-	z-index: 10;
+  left: 555px;
+  top: 180px;
+  width: 58px;
+  height: 57px;
+	animation: flashLongOff 0.2s infinite;
+	animation-delay: 1.5s;
+	animation-fill-mode: both;
+	z-index: 5;
 }
 
-.hit_pop5 {
+.s8 {
 	position: absolute;
-  left: 659px;
-  top: 435px;
-  width: 140px;
-  height: 186px;
-	z-index: 10;
+  left: 560px;
+  top: 164px;
+  width: 52px;
+  height: 81px;
+	animation: pulseBig 1s infinite;
+	animation-delay: 1.5s;
+	animation-fill-mode: both;
+	z-index: 5;
 }
 
-.hit_pop6 {
-	position: absolute;
-  left: 805px;
-  top: 586px;
-  width: 140px;
-  height: 105px;
-	z-index: 10;
+@keyframes pulseBig {
+  0% {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
 }
 
-.hit_pop7 {
-	position: absolute;
-  left: 805px;
-  top: 479px;
-  width: 140px;
-  height: 105px;
-	z-index: 10;
-}
+@keyframes flashLongOff {
+  0%,  100% {
+    opacity: 0;
+  }
 
-.hit_close1 {
-	position: absolute;
-	width: 1080px;
-	height: 810px;
-	display: none;
-	z-index: 20;
+  25%, 50%, 75% {
+    opacity: 1;
+  }
 }
